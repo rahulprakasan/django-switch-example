@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>STATUS</title>
+<link rel="stylesheet"href="{% static "css/myfile.css"%}"/>
+</head>
+<body>
+<div class="djangotwo">
+    {%if button_status%}
+     <table>
+         <thead>
+         <th>status</th>
+         <th>date accessed</th>
+
+         </thead>
+
+        {% for acc in button_status%}
+     <tr>
+        <td>{{acc.button }}</td>
+         <td>{{acc.date}}</td>
+
+     </tr>
+    {% endfor %}
+     </table>
+    {% else %}
+
+     <p>no data found</p>
+    {% endif %}
+
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+        <h1>welcome to home page!</h1>
+        <form  method="POST">
+        {{form.as_p}}
+        {% csrf_token %}
+        <input type="submit" class="btn btn-primary" value="ON" name="btn1">
+        <input type="submit" class="btn btn-primary" value="OF" name="btn2">
+            <!--<a href="{%url 'waterapp:status' %}">click me</a>
+            <input type="submit" class="btn btn-primary" value="HISTORY" name="btn3">-->
+
+    </form>
+        <form action="{%url 'waterapp:status' %}">
+        <input type="submit" value="HISTORY" /></form>
+
+
+
+    </div>
+</div>
+
+
+</body>
+</html>
